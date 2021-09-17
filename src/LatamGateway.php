@@ -48,6 +48,9 @@ class LatamGateway extends AbstractGateway
         return $this->createRequest('\Omnipay\PayU\Message\Latam\PurchaseRequest', $parameters);
 
     }
-
-
+	
+	public function completePurchase(array $parameters = array())
+    {
+    	return $this->createRequest('\Omnipay\PayU\Message\Latam\CompletePurchaseRequest', $parameters);
+    }
 }
